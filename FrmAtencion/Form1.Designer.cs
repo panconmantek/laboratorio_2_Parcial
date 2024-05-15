@@ -45,6 +45,7 @@
             lstMedicos.Name = "lstMedicos";
             lstMedicos.Size = new Size(299, 214);
             lstMedicos.TabIndex = 0;
+            lstMedicos.SelectedIndexChanged += lstMedicos_SelectedIndexChanged;
             // 
             // lstPacientes
             // 
@@ -115,6 +116,7 @@
             Controls.Add(lstPacientes);
             Controls.Add(lstMedicos);
             Name = "FrmAtencion";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Micaela Paz Acuna";
             FormClosing += FrmAtencion_FormClosing;
             Load += FrmAtencion_Load;

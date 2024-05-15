@@ -16,6 +16,14 @@
             this.consultas = new List<Consulta>();
         }
 
+        public string ObtenerFichaExtra
+        {
+            get
+            {
+                return this.FichaExtra();
+            }
+        }
+
         public static Consulta operator +(PersonalMedico doctor, Paciente paciente)
         {
             Consulta nuevaConsulta = new Consulta(DateTime.Now, paciente);

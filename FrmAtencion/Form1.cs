@@ -36,7 +36,7 @@ namespace FrmAtencion
                 MessageBox.Show("Debe seleccionar un Medico y un Paciente para poder continuar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            Consulta nuevaConsulta = new Consulta(DateTime.Now, paciente1);
+            Consulta nuevaConsulta = medico1 + paciente1;
 
             MessageBox.Show(nuevaConsulta.ToString(), "Atención Finalizada", MessageBoxButtons.OK);
             lstMedicos.SelectedIndex = -1;
@@ -56,6 +56,17 @@ namespace FrmAtencion
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void lstMedicos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            PersonalMedico medico1 = lstMedicos.SelectedItem as PersonalMedico;
+
+            if (medico1 is not null)
+            {
+                rtbInfoMedico.Text = medico1.ObtenerFichaExtra;
+            }
+
         }
     }
 }
