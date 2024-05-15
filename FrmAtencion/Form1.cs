@@ -35,12 +35,13 @@ namespace FrmAtencion
             {
                 MessageBox.Show("Debe seleccionar un Medico y un Paciente para poder continuar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            Consulta nuevaConsulta = medico1 + paciente1;
-
-            MessageBox.Show(nuevaConsulta.ToString(), "Atención Finalizada", MessageBoxButtons.OK);
-            lstMedicos.SelectedIndex = -1;
-            lstPacientes.SelectedIndex = -1;
+            else
+            {
+                Consulta nuevaConsulta = medico1 + paciente1;
+                MessageBox.Show(nuevaConsulta.ToString(), "Atención Finalizada", MessageBoxButtons.OK);
+                lstMedicos.SelectedIndex = -1;
+                lstPacientes.SelectedIndex = -1;
+            }
 
         }
 
