@@ -41,7 +41,7 @@
             return this.NombreCompleto;
         }
 
-        internal abstract string FichaExtra();
+        protected abstract string FichaExtra();
         public static string FichaPersonal(Persona p)
         {
             StringBuilder sb = new StringBuilder();

@@ -71,6 +71,7 @@
             btnAtender.TabIndex = 4;
             btnAtender.Text = "Atender";
             btnAtender.UseVisualStyleBackColor = true;
+            btnAtender.Click += btnAtender_Click;
             // 
             // btnSalir
             // 
@@ -80,6 +81,7 @@
             btnSalir.TabIndex = 5;
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = true;
+            btnSalir.Click += btnSalir_Click;
             // 
             // lblMedicos
             // 
@@ -114,6 +116,7 @@
             Controls.Add(lstMedicos);
             Name = "FrmAtencion";
             Text = "Micaela Paz Acuna";
+            FormClosing += FrmAtencion_FormClosing;
             Load += FrmAtencion_Load;
             ResumeLayout(false);
             PerformLayout();

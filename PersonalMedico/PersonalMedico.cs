@@ -23,7 +23,7 @@
             return nuevaConsulta;
         }
 
-        internal override string FichaExtra()
+        protected override string FichaExtra()
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine($"¿Finalizó la residencia {(this.esRecidente ? "SI" : "NO")}?");
@@ -33,7 +33,6 @@
             }
             return sb.ToString();
         }
-
 
     }
 }
